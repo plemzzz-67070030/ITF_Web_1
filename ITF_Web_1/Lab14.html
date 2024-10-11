@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--https://github.com/multi05369/ITFLab2024/blob/main/Labs/Lab14%20Web%20Programming%232/functionSaveToCSV.js-->
+</head>
+<body>
+    <h1 id="username">Hello World</h1>
+    <div id ="profile" style="position: relative; height: 300px; width: 300px; background-image: url(https://th.bing.com/th/id/OIP.zlt1u36lMm8-TJhG8kcveQHaEG?w=297&h=180&c=7&r=0&o=5&pid=1.7); border-radius: 100%; background-position: center; background-size: cover; "> 
+        <div style="position:  absolute; bottom: 0; right: 15px; height: 50px; width: 50px; background-color: red; border-radius: 50%; display: flex; justify-content: center; align-items: center;"></div>
+    </div>
+    <div>
+        <label for="">Set User</label>
+        <input type="text" placeholder="Enter" id="input"><button onclick="usernamefunc()">Set</button>
+    </div>
+    <div>
+        <label for="">Set Image</label>
+        <input type="text" placeholder="Enter" id="input2"><button onclick="setimage()">Set</button>
+    </div>
+
+    <div>Phone Number List</div>
+    <script>
+        const username = document.getElementById("username");
+        const input = document.getElementById("input");
+        const profile = document.getElementById("profile");
+        const input2 = document.getElementById("input2");
+        username.textContent = "Hello";
+        function usernamefunc(){
+            username.textContent = input.value;
+            console.log(input.value);
+            input.value = "";
+        };
+        function setimage(){
+            profile.style.backgroundImage = "url("+ input2.value +")";
+            console.log(input2.value);
+            input2.value = "";
+        };
+    </script>
+</body>
+</html>
